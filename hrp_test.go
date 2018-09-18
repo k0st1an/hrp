@@ -20,6 +20,9 @@ var samples = []struct {
 	{sample: "640", expValue: "640", expValueType: "", expError: false},
 	{sample: "1", expValue: "1", expValueType: "", expError: false},
 	{sample: "d", expValue: "", expValueType: "", expError: true},
+	{sample: "20k wps", expValue: "20000", expValueType: "wps", expError: false},
+	{sample: "20 wps", expValue: "20", expValueType: "wps", expError: false},
+	{sample: "42.1k rps", expValue: "", expValueType: "", expError: true},
 }
 
 func TestConvert(t *testing.T) {
